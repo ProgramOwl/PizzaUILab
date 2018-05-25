@@ -1,0 +1,55 @@
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.col-3 {
+  height: 94vh; /*** Forces height of div to be almost 100% ***/
+  width: 33vh;
+  flex: 1;
+  border: 1px solid black;
+}
+
+.box {
+  border: 1px solid black;
+  
+}
+
+.toppings-slide {
+  overflow-y: auto;
+}
+
+/***  INCLASS EXAMPLE 
+  #pizza {
+  width: 300px;
+  height: 300px;
+  background: 
+    url(blackolives.png),
+    url(mushrooms.png),
+    url(pizza.png);
+}
+
+.btn {
+  background: #722;
+  color: #f8f8f8;
+  padding: 5px;
+  height: 20px;
+  width: 100px;
+  text-align: center;
+} */
+
+
+/*** MOBILE CSS ***/
+@media screen and (max-width: 650px){
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .col-3 {
+    height: 33vh;
+    width: 100%;
+    flex: 1;
+    border: 2px solid black;
+  }
+}
