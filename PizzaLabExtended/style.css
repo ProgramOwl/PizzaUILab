@@ -1,0 +1,304 @@
+:root{
+	/*Basic*/
+	--blackp: #000;/*0,0,0*/
+	--whitep: #fff;/*255,255,255*/
+	/*Color*/
+	--redp: #ef3232;/*239,50,50*/
+	--purpleltp: #b39ddb;/*179,157,219*/
+	--purplep: #9575cd;/*149,117,205*/
+	--limep: #d6e03e;/*214,224,62*/
+	--greenltp: #dce775;/*220,231,117*/
+	--greenp: #8cab3c;/*140,171,60*/
+	/*Grays*/
+	--grayltp: #989898;/*152,152,152*/
+	--grayp: #636363;/*99,99,99*/
+	--graydkp: #222;
+	
+	/*Other*/
+	--mainfont: "Arial Black", Gadget, sans-serif;	
+	--textfont: Verdana, Geneva, sans-serif;
+}
+
+#pizza{
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center, center;
+	margin: 0 auto;
+	width:300px;
+	height: 300px;
+	background-image:
+	url(images/bases/pizza.png);
+}
+#pizzabox{
+	min-height: 175px;
+	max-height: 175px;
+	width: 100%;
+	overflow: hidden;
+}
+#poc{
+	width:100%;
+	min-width: 300px;
+	padding: 0;
+	margin: 0;	
+	text-align: center;
+	background: linear-gradient(var(--whitep), var(--purpleltp), var(--purplep)); 
+	max-height: 75vh;
+/*	overflow-y: auto;*/
+}
+#poc button{
+	font-family: var(--textfont);
+	font-size: 18px;
+	font-weight: 500;
+}
+#poc div{
+	cursor: default;
+	font-family: var(--textfont);
+	font-size: 18px;
+	font-weight: 500;
+}
+#poc p{
+	cursor: default;	
+	font-size: 20px;
+	font-weight: 700;
+	margin: 0;
+	padding: 0.2em 0.5em;
+}
+#poc #order{
+	border-top: 3px solid black;
+	position: relative;
+	top: -1px;
+	text-align: left;
+	background-color: var(--greenp);
+	display: inline-flex;
+	flex-direction: row;
+	max-height: 75vh;
+	height: 100%;
+	overflow-y: auto;
+}
+#poc #order > div{	
+	min-width: 50%;
+	flex: 0;
+}
+#poc #order > div:last-child{
+	border-left: 3px solid black;
+	margin-left: -3px;
+}
+#poc .ordersection{
+	padding: 0;
+	margin: 0;
+	background-color: var(--greenltp);	
+}
+#poc .section-title{
+	padding: .25em 1em;
+	font-family: var(--mainfont);
+	font-size: 30px;
+	font-weight: 500;
+	background-color: var(--redp);
+	color: var(--whitep);
+	cursor: default;
+}
+#poc .poc-collapse-menu{
+	padding: 0;
+	margin: 0;
+	display: block;	
+	background-color: var(--greenltp);
+	overflow: hidden;
+	transition-duration: 1s;
+	height: auto;
+	max-height: 0;
+	transition: max-height 0.5s linear;
+	overflow-y: auto;
+}
+#poc .collapse-ul{
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	list-style: none;
+	display: inline-flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+#poc .collapse-ul-cost{
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	list-style: none;
+	display: inline-flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	cursor: default;
+}
+#poc .menu-item, #poc .cost-item{
+	min-width: 135px;
+	flex: auto;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	padding: .45em .5em;
+	margin: 0;	
+	font-family: var(--textfont);
+	font-size: 18px;
+	font-weight: 500;
+	color: var(--blackp);	
+}
+#poc .cost-item:hover {
+	background-color: rgba(255,255,255,0.5);	
+}
+#poc .cost-item{
+	padding: 0;
+	margin: 0;
+	display: inline-flex;
+	width: 100%;
+	height: 33px;
+}
+#poc #curp-size:hover{
+	background: none;
+	cursor: default;
+}
+#poc .cost-box{
+	display: inline-block;
+	padding: .35em .5em;
+	max-width: 85px;
+	min-width: 60px;
+	width: 50%;
+	height: 19px;
+}
+#poc .name-box{
+	display: inline-block;
+	padding: .35em .5em;
+	width: auto;
+	min-width: 60px;
+	width: 100%;
+	height: 19px;
+	overflow: hidden;
+}
+#poc .double-btn{
+	height: 33px;
+	padding: 2px;
+}
+#poc .remove-btn{
+	display: inline-block;
+	background: transparent;
+	padding: 0;
+	margin: 0;
+	height: 30px;
+	cursor: default;
+}
+#poc .remove-btn button{
+	margin: 0;
+	min-width: 100px;
+	width: 50%;
+	height: 100%;
+	cursor: pointer;
+}
+
+#poc #sub-presets .collapse-ul{
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	list-style-type: circle;
+	list-style-position: inside;
+	display: inline-flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+#poc #addtocart, #poc #orderComplete{
+	width: 100%;
+	padding: 3px;
+	font-family: var(--textfont);
+	font-size: 18px;
+	font-weight: 500;
+}
+/*radio*/
+#poc .size-box{
+	display: inline-flex;
+	flex-direction: row-reverse;
+	height: 30px;
+}
+#poc .size-box label:nth-child(1){
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url(images/selectionIcons/full.png);
+}
+#poc .size-box label:nth-child(2){
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url(images/selectionIcons/right.png);
+}
+#poc .size-box label:nth-child(3){
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url(images/selectionIcons/left.png);
+}
+
+/* The container */
+#poc .radio-container {
+    display: block;
+/*    position: absolute;*/
+/*    padding-left: 28px;*/
+/*    margin-bottom: 10px;*/
+    cursor: pointer;
+}
+
+/* Hide the browser's default radio button */
+#poc .radio-container input {
+    position: static;
+    opacity: 0;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+}
+
+/* Create a custom radio button */
+#poc .checkmark-full, #poc .checkmark-right, #poc .checkmark-left {
+    position: relative;
+    top: -13px;
+    left: -36px;
+}
+#poc .checkmark-full:after, #poc .checkmark-left:after, #poc .checkmark-right:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+#poc .radio-container input:checked ~ .checkmark-full:after,
+#poc .radio-container input:checked ~ .checkmark-left:after,
+#poc .radio-container input:checked ~ .checkmark-right:after {
+    display: block;
+}
+/* Style the indicator (dot/circle) */
+#poc .radio-container .checkmark-full:after {
+ 	top:  3px;
+	left: 3px;
+	height: 30px;
+	width: 30px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url(images/selectionIcons/full-selected.png);
+}
+#poc .radio-container .checkmark-left:after {
+ 	top:  3px;
+	left: 3px;
+	height: 30px;
+	width: 30px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url(images/selectionIcons/left-selected.png);
+}
+#poc .radio-container .checkmark-right:after {
+ 	top:  3px;
+	left: 3px;
+	height: 30px;
+	width: 30px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url(images/selectionIcons/right-selected.png);
+}
+
+@media screen and (max-width:650px){
+	#poc #order{
+		display: block;
+	}
+}
