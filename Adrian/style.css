@@ -19,6 +19,10 @@
   overflow-y: auto;
 }
 
+#prebuilt-body, #size-body, #toppings-body {
+  display: none;
+}
+
 /***  INCLASS EXAMPLE 
   #pizza {
   width: 300px;
@@ -47,6 +51,7 @@
   }
 
   .col-3 {
+    overflow-y: scroll;
     height: 33vh;
     width: 100%;
     flex: 1;
